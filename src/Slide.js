@@ -51,6 +51,7 @@ const settings = {
     );
   }
   const images = [
+    {src: '/bg9.jpg', title: 'Toàn cảnh dự án'},
     {src: '/bg1.jpg', title: 'Trung tâm Hội chợ Triển lãm Quốc gia - The Grand Expo'},
     {src: '/bg2.jpg', title: 'Tổng thể dự án'},
     {src: '/bg3.jpg', title: 'Vincom Mega Mall'},
