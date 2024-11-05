@@ -11,23 +11,34 @@ import { useRef, useState } from 'react';
 import Header from './Header';
 import SwiperWrap from './Slide';
 import ConsultationModal from './MyModal';
+import PhoneModal from './PhoneModal';
 const dataSource = [
   {
-    key: '6',
-    macan: 'VD7-20',
+    key: '3',
+    macan: 'AD10-22',
     dientich: '62,5m2',
-    gia: '18.8 tỷ',
-    giam2: '285 triệu/m2',
-    dacdiem: 'Căn liền kề Viễn Đông, đối diện công viên',
+    gia: '14,8 tỷ',
+    giam2: '236 triệu/m2',
+    dacdiem: 'Căn liền kề ',
     huongcua: 'Đông Nam'
   },
+  
   {
     key: '5',
     macan: 'AD4-15',
     dientich: '63m2',
-    gia: '16,5 tỷ',
-    giam2: '264 triệu/m2',
-    dacdiem: 'Căn xẻ khe Ánh Dương',
+    gia: '15,5 tỷ',
+    giam2: '240 triệu/m2',
+    dacdiem: 'Căn xẻ khe',
+    huongcua: 'Đông Nam'
+  },
+  {
+    key: '6',
+    macan: 'VD7-20',
+    dientich: '62,5m2',
+    gia: '15.8 tỷ',
+    giam2: '245 triệu/m2',
+    dacdiem: 'Căn xẻ khe, đối diện công viên',
     huongcua: 'Đông Nam'
   },
   {
@@ -36,44 +47,43 @@ const dataSource = [
     dientich: '62,5m2',
     gia: '14,8 tỷ',
     giam2: '236 triệu/m2',
-    dacdiem: 'Căn liền kề Nhật Nguyệt',
+    dacdiem: 'Căn liền kề',
     huongcua: 'Đông Nam'
+  },
+  {
+    key: '9',
+    macan: 'TN4-172',
+    dientich: '63m2',
+    gia: '15,5 tỷ',
+    giam2: '270 triệu/m2',
+    dacdiem: 'Căn liền kề',
+    huongcua: 'Tây Nam'
+  },
+  {
+    key: '6',
+    macan: 'AD4-18',
+    dientich: '80m2',
+    gia: '17,2 tỷ',
+    giam2: '240 triệu/m2',
+    dacdiem: 'Căn xẻ khe',
+    huongcua: 'Tây Nam'
   },
   {
     key: '2',
     macan: 'NN4-87',
     dientich: '87,5m2',
-    gia: '24,1 tỷ',
-    giam2: '275 triệu/m2',
+    gia: '23,1 tỷ',
+    giam2: '270 triệu/m2',
     dacdiem: 'Căn góc, mặt phố Nhật Nguyệt',
     huongcua: 'Đông Nam'
   },
-  {
-    key: '3',
-    macan: 'AD10-22',
-    dientich: '62,5m2',
-    gia: '14,8 tỷ',
-    giam2: '236 triệu/m2',
-    dacdiem: 'Căn liền kề Ánh Dương',
-    huongcua: 'Tây Bắc'
-  },
   
-  
-  {
-    key: '6',
-    macan: 'AD4-18',
-    dientich: '80m2',
-    gia: '21 tỷ',
-    giam2: '262 triệu/m2',
-    dacdiem: 'Căn xẻ khe Ánh Dương',
-    huongcua: 'Tây Nam'
-  },
   {
     key: '7',
     macan: 'AD4-01',
     dientich: '139m2',
     gia: '40 tỷ',
-    giam2: '290 triệu/m2',
+    giam2: '280 triệu/m2',
     dacdiem: 'Căn góc, mặt phố Ánh Dương 11',
     huongcua: 'Đông Nam'
   },
@@ -95,22 +105,14 @@ const dataSource = [
     dacdiem: 'Căn xẻ khe, mặt phố Ánh Dương',
     huongcua: 'Đông Nam'
   },
-  {
-    key: '9',
-    macan: 'TN4-172',
-    dientich: '63m2',
-    gia: '17 tỷ',
-    giam2: '270 triệu/m2',
-    dacdiem: 'Căn liền kề Thiên Nga',
-    huongcua: 'Tây Nam'
-  },
+ 
   {
     key: '10',
     macan: 'NN4-87',
     dientich: '87,5m2',
     gia: '24,1 tỷ',
     giam2: '275 triệu/m2',
-    dacdiem: 'Căn góc mặt phố Nhật Nguyệt',
+    dacdiem: 'Căn góc, mặt phố Nhật Nguyệt',
     huongcua: 'Đông Bắc'
   },
   {
@@ -119,7 +121,7 @@ const dataSource = [
     dientich: '87,5m2',
     gia: '24,1 tỷ',
     giam2: '275 triệu/m2',
-    dacdiem: 'Căn góc mặt phố Nhật Nguyệt',
+    dacdiem: 'Căn góc, mặt phố Nhật Nguyệt',
     huongcua: 'Đông Bắc'
   },
   {
@@ -128,7 +130,7 @@ const dataSource = [
     dientich: '163m2',
     gia: '56 tỷ',
     giam2: '343 triệu/m2',
-    dacdiem: 'Căn góc mặt phố TP4.4',
+    dacdiem: 'Căn góc, mặt phố TP4.4',
     huongcua: 'Đông Nam'
   },
   
@@ -218,7 +220,7 @@ function App() {
       </div>
       <div className='table-wrap'>
         <h2 className='table-title'>
-        Giá và Quỹ căn Vinhomes Global Gate
+        Bảng giá Vinhomes Global Gate tháng 11/2024
         </h2>
       <Table 
       rowHoverable={false} 
@@ -227,7 +229,7 @@ function App() {
       </div>
       
       <div className='see-all' onClick={showModal}>Xem toàn bộ quỹ căn <RightOutlined className="small-icon"/></div>
-      <ConsultationModal visible={isModalVisible} onClose={closeModal}></ConsultationModal> 
+      <PhoneModal visible={isModalVisible} onClose={closeModal}></PhoneModal> 
     </div>
   );
 }

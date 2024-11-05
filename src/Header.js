@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Header.css';
 import ConsultationModal from './MyModal';
+import PhoneModal from './PhoneModal';
 function Header(){
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -18,13 +19,11 @@ function Header(){
     <div className="menu">
       <nav className="nav hidden-column">
         <ul className="nav-list">
-          <li className="nav-item">Trang Chủ</li>
-          <li className="nav-item">Giới Thiệu</li>
-          <li className="nav-item">Liên Hệ</li>
+          <li className="nav-item" onClick={showModal}>Liên Hệ</li>
         </ul>
       </nav>
-      <button className="consult-button" onClick={showModal}>Nhận Tư Vấn Ngay</button>
-      <ConsultationModal visible={isModalVisible} onClose={closeModal}></ConsultationModal>
+      <button className="consult-button" onClick={showModal}>HOTLINE: 0984.472.587</button>
+      <PhoneModal visible={isModalVisible} onClose={closeModal}></PhoneModal> 
     </div>
   </header>
 }
