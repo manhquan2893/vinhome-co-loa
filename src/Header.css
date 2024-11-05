@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Padding cho header */
+    background-color: #fff; /* Màu nền cho header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho header */
+    position: fixed; /* Cố định menu ở trên cùng */
+    top: 0; /* Đặt ở trên cùng */
+    left: 0; /* Căn trái */
+    right: 0; /* Căn phải */
+    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+  }
+  
+  .logo {
+    font-size: 24px; /* Kích thước logo */
+    font-weight: bold; /* Đậm cho logo */
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav {
+    margin-right: 20px; /* Khoảng cách giữa menu và nút */
+  }
+  
+  .nav-list {
+    list-style-type: none; /* Không hiển thị dấu chấm */
+    display: flex; /* Hiển thị theo hàng ngang */
+    padding: 0; /* Xóa padding */
+    margin: 0; /* Xóa margin */
+  }
+  
+  .nav-item {
+    margin: 0 15px; /* Khoảng cách giữa các item */
+    cursor: pointer; /* Con trỏ khi hover */
+  }
+  
+  .consult-button {
+    padding: 10px 20px; /* Padding cho nút */
+    background-color: #c48c37; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không có viền */
+    border-radius: 4px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover */
+    font-weight: bold; /* Chữ đậm */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+  }
+  
+  .consult-button:hover {
+    background-color: #a4752e; /* Màu nền khi hover */
+  }
