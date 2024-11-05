@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Helmet } from "react-helmet";
 import 'swiper/css';
 import './App.css';
 
@@ -213,11 +212,6 @@ function App() {
   
   return (
     <div className="App">
-      <Helmet>
-          <title>BẢNG GIÁ VINHOME CỔ LOA MỚI NHẤT</title>
-          <meta name="description" 
-          content="Bảng giá vinhome Cổ Loa mới tháng 11/2024" />
-      </Helmet>
       <Header></Header>  
       <h2 className='tong-quan-title'>Tổng quan dự án Vinhomes Global Gate
       </h2>
