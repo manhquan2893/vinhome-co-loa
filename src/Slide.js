@@ -4,7 +4,6 @@ import 'swiper/css';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useRef } from 'react';
 
-
 const settings = {
     dots: true,
     infinite: true,
