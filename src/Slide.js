@@ -50,15 +50,15 @@ const settings = {
     );
   }
   const images = [
-    {src: './bg9.jpg', title: 'Toàn cảnh dự án'},
-    {src: './bg1.jpg', title: 'Trung tâm Hội chợ Triển lãm Quốc gia - The Grand Expo'},
-    {src: './bg2.jpg', title: 'Tổng thể dự án'},
-    {src: './bg3.jpg', title: 'Vincom Mega Mall'},
-    {src: './bg4.jpg', title: 'Công viên Royal Park'},
-    {src: './bg5.jpg', title: 'Nhà để xe'},
-    {src: './bg6.jpg', title: 'Wonderland'},
-    {src: './bg7.jpg', title: 'Wonderland'},
-    {src: './bg8.jpg', title: 'Quảng trường Tháp Đồng hồ Boutique Park'},
+    {src: '/bg9.jpg', title: 'Toàn cảnh dự án'},
+    {src: '/bg1.jpg', title: 'Trung tâm Hội chợ Triển lãm Quốc gia - The Grand Expo'},
+    {src: '/bg2.jpg', title: 'Tổng thể dự án'},
+    {src: '/bg3.jpg', title: 'Vincom Mega Mall'},
+    {src: '/bg4.jpg', title: 'Công viên Royal Park'},
+    {src: '/bg5.jpg', title: 'Nhà để xe'},
+    {src: '/bg6.jpg', title: 'Wonderland'},
+    {src: '/bg7.jpg', title: 'Wonderland'},
+    {src: '/bg8.jpg', title: 'Quảng trường Tháp Đồng hồ Boutique Park'},
   
   ]
   
